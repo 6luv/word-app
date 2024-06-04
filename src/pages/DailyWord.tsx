@@ -1,14 +1,11 @@
 import { Accordion, Button, Flex } from "@chakra-ui/react";
 import { FC, useEffect } from "react";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
-import WordCard from "../components/WordCard";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import WordCard from "../components/WordCard";
 
 const DailyWord: FC = () => {
   const navigate = useNavigate();
-
-  const { day } = useParams();
-
   const { state } = useLocation();
 
   useEffect(() => {

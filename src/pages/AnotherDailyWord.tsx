@@ -57,7 +57,7 @@ const AnotherDailyWord: FC = () => {
     }
   };
 
-  const onClickLeft = () => {
+  const onClickPrev = () => {
     if (currentSentenceNumber === 0) {
       setCurrentSentenceNumber(state.wordData.sentences.length - 1);
     } else {
@@ -118,7 +118,7 @@ const AnotherDailyWord: FC = () => {
             size="sm"
             mb={2}
             ml={2}
-            onClick={onClickLeft}
+            onClick={onClickPrev}
           >
             <FiArrowLeft />
           </Button>
