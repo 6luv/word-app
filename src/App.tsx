@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import DailyWord from "./pages/DailyWord";
+// import DailyWord from "./pages/DailyWord";
 import AnotherDailyWord from "./pages/AnotherDailyWord";
 
 const App: FC = () => {
