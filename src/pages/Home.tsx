@@ -31,6 +31,26 @@ const Home: FC = () => {
           </Button>
         ))}
       </Flex>
+      <Flex flexDir="column" mt={8} gap={4} px={4}>
+        {sampleData.map((v: IWords) => (
+          <Button
+            key={v.day}
+            variant="outline"
+            colorScheme="blue"
+            justifyContent="start"
+            isTruncated={true}
+            onClick={() =>
+              navigate(`/another-daily-word/${v.day}`, {
+                state: {
+                  wordData: v,
+                },
+              })
+            }
+          >
+            <Text fontWeight="bold">Day {v.day}</Text> - {v.title}
+          </Button>
+        ))}
+      </Flex>
     </Flex>
   );
 };
