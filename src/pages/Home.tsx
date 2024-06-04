@@ -11,7 +11,7 @@ const Home: FC = () => {
       <Text fontSize={48} fontWeight="bold" textAlign="center" mt={8}>
         Word App
       </Text>
-      <Flex flexDir="column" mt={8} gap={4} px={4}>
+      {/* <Flex flexDir="column" mt={8} gap={4} px={4}>
         {sampleData.map((v: IWords) => (
           <Button
             key={v.day}
@@ -27,10 +27,10 @@ const Home: FC = () => {
               })
             }
           >
-            <Text fontWeight="bold">Day {v.day}</Text> - {v.title}
+            <Text fontWeight="bold">Day {v.day} </Text> - {v.title}
           </Button>
         ))}
-      </Flex>
+      </Flex> */}
       <Flex flexDir="column" mt={8} gap={4} px={4}>
         {sampleData.map((v: IWords) => (
           <Button

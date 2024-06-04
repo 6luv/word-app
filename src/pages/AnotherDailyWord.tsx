@@ -18,7 +18,7 @@ const AnotherDailyWord: FC = () => {
         }`,
         {
           input: {
-            text: state.wordData.sentence[currentSentenceNumber]?.english,
+            text: state.wordData.sentences[currentSentenceNumber]?.english,
           },
           voice: {
             languageCode: "en-US",
@@ -95,6 +95,7 @@ const AnotherDailyWord: FC = () => {
         <FiArrowLeft />
       </Button>
       <Flex
+        color="blue.600"
         fontSize={24}
         fontWeight="bold"
         textAlign="center"
@@ -103,11 +104,20 @@ const AnotherDailyWord: FC = () => {
       >
         Day {state.wordData.day} - {state.wordData.title}
       </Flex>
-      <Flex mt={8} px={4} flexDirection="column">
+      <Flex
+        mt={8}
+        px={4}
+        flexDirection="column"
+        border="1px"
+        borderColor="blue.500"
+        rounded={10}
+        py={2}
+      >
         <Text>{state.wordData.sentences[currentSentenceNumber]?.english}</Text>
         <Text
-          bgColor={!isClicked ? "" : "black"}
+          bgColor={isClicked ? "" : "black"}
           mt={2}
+          rounded={10}
           cursor="pointer"
           onClick={() => setIsClicked(!isClicked)}
         >
@@ -118,8 +128,6 @@ const AnotherDailyWord: FC = () => {
             variant="ghost"
             colorScheme="blue"
             size="sm"
-            mb={2}
-            ml={2}
             onClick={onClickPrev}
           >
             <FiArrowLeft />
@@ -128,8 +136,6 @@ const AnotherDailyWord: FC = () => {
             variant="ghost"
             colorScheme="blue"
             size="sm"
-            mb={2}
-            ml={2}
             onClick={onClickNext}
           >
             <FiArrowRight />
@@ -138,8 +144,6 @@ const AnotherDailyWord: FC = () => {
             variant="ghost"
             colorScheme="blue"
             size="sm"
-            mb={2}
-            ml={2}
             onClick={onClickAudio}
           >
             <FiVolume2 />

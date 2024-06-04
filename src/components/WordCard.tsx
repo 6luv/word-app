@@ -68,7 +68,7 @@ const WordCard: FC<WordCardProps> = ({ sentence }) => {
         <Button
           variant="ghost"
           colorScheme="blue"
-          size="sm"
+          size="md"
           mb={2}
           ml={2}
           onClick={onClickAudio}

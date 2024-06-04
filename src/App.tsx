@@ -9,7 +9,7 @@ const App: FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/daily-word/:day" element={<DailyWord />} />
+        {/* <Route path="/daily-word/:day" element={<DailyWord />} /> */}
         <Route path="/another-daily-word/:day" element={<AnotherDailyWord />} />
       </Routes>
     </BrowserRouter>
